@@ -7,6 +7,6 @@ steps:
     args: ['push', 'gcr.io/$PROJECT_ID/docker-node']
     # Deploy container image to Cloud Run
   - name: "gcr.io/cloud-builders/gcloud"
-    args: ['dev_appserver.py', 'deploy', 'managed', '--image', 'gcr.io/$PROJECT_ID/docker-node']
+    args: ['app', 'deploy', 'managed', '--image', 'gcr.io/$PROJECT_ID/docker-node']
 images:
   - gcr.io/$PROJECT_ID/docker-node
